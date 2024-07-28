@@ -13,4 +13,8 @@ export class AppController {
   getBye(): string {
     return this.appService.getBye();
   }
+  @Get('contact')
+  getContact(): string {
+    return this.appService.getContact();
+  }
 }

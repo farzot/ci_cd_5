@@ -8,4 +8,7 @@ export class AppService {
   getBye(): string {
     return 'Goodbye World!';
   }
+  getContact():string{
+    return 'Contact Information: 123 Main St, City, State, 12345';
+  }
 }
