@@ -47,3 +47,4 @@ jobs:
           cd /root/ci_cd
           npm install --production
           pm2 restart all
+          pm2 save
