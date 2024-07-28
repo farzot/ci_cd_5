@@ -43,5 +43,5 @@ jobs:
           mkdir -p /root/ci_cd
           cd /root/ci_cd
           npm install --production
-          pm2 restart all
+          pm2 start dist/main.js --name "jenkins"
           pm2 save
