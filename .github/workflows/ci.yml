@@ -34,10 +34,8 @@ jobs:
           mkdir -p /root/ci_cd
           cd /root/ci_cd
           if [ ! -d ".git" ]; then
-            # Agar .git papkasi mavjud bo'lmasa, git init bajariladi
-            git init
-            git remote add origin https://github.com/farzot/ci_cd_5.git
-            git pull origin master
+            # Agar .git papkasi mavjud bo'lmasa, git clone bajariladi
+            git clone https://github.com/farzot/ci_cd_5.git .
           else
             # Agar .git papkasi mavjud bo'lsa, faqat yangilanishni olish
             git pull origin master
