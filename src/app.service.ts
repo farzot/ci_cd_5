@@ -14,4 +14,7 @@ export class AppService {
   // getMyAllStuff(): string {
   //   return this.getHello() + '\n' + this.getBye() + '\n' + this.getContact();
   //   }
+  getThank(): string {
+    return 'Thakn you Najim!';
+  }
 }
