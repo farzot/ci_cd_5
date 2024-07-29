@@ -37,10 +37,10 @@ jobs:
             # Agar .git papkasi mavjud bo'lmasa, git init bajariladi
             git init
             git remote add origin https://github.com/farzot/ci_cd_5.git
-            git pull master
+            git pull origin master
           else
             # Agar .git papkasi mavjud bo'lsa, faqat yangilanishni olish
-            git pull master
+            git pull origin master
           fi
           npm i
           npm run build
