@@ -31,9 +31,16 @@ jobs:
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /root/ci_cd || mkdir -p /root/ci_cd && cd /root/ci_cd
-            git init
-            git pull https://github.com/farzot/ci_cd_5.git
+          if [ ! -d "/root/ci_cd/.git" ]; then
+            # Papka mavjud emas, to'liq klon qilish
+            git clone git@github.com:${{ secrets.REPOSITORY }}.git /root/ci_cd
+          else
+            # Papka mavjud, yangilanishlarni olish
+            cd /root/ci_cd
+            git pull origin master
+          fi
+          cd /root/ci_cd
           npm install --production
+          npm run build
           pm2 reload jenkins || pm2 start dist/main.js --name "jenkins"
           pm2 save
