@@ -29,4 +29,8 @@ export class AppController {
   getThankAll(): string {
     return `Thank you, ${this.appService.getHello()}! Thank you, ${this.appService.getBye()}! Contact Information: ${this.appService.getContact()}`;
   }
+  @Get('thankContact')
+  getThankContact(): string {
+    return `Thank you, ${this.appService.getHello()}! Contact Information: ${this.appService.getContact()}`;
+  }
 }
