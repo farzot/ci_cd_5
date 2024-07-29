@@ -13,10 +13,10 @@ export class AppController {
   // getHello(): string {
   //   return this.appService.getHello();
   // }
-  // @Get('bye')
-  // getBye(): string {
-  //   return this.appService.getBye();
-  // }
+  @Get('bye')
+  getBye(): string {
+    return this.appService.getBye();
+  }
   // @Get('contact')
   // getContact(): string {
   //   return this.appService.getContact();
