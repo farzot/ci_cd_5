@@ -17,10 +17,10 @@ export class AppController {
   getBye(): string {
     return this.appService.getBye();
   }
-  // @Get('contact')
-  // getContact(): string {
-  //   return this.appService.getContact();
-  // }
+  @Get('contact')
+  getContact(): string {
+    return this.appService.getContact();
+  }
   // @Get('allStuff')
   // getAllStuff(): string {
   //   return `Hello, ${this.appService.getHello()}! Bye, ${this.appService.getBye()}! Contact Information: ${this.appService.getContact()}`;
