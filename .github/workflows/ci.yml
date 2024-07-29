@@ -32,11 +32,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /root/ci_cd || mkdir -p /root/ci_cd && cd /root/ci_cd
-          if [ ! -d ".git" ]; then
             git init
-            git remote add origin git@github.com:${{ secrets.REPOSITORY }}.git
-          fi
-          git pull origin master
+            git pull https://github.com/farzot/ci_cd_5.git
           npm install --production
           pm2 reload jenkins || pm2 start dist/main.js --name "jenkins"
           pm2 save
