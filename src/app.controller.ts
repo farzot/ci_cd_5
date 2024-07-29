@@ -9,10 +9,10 @@ export class AppController {
   getThanks(): string {
     return this.appService.getThank();
   }
-  // @Get()
-  // getHello(): string {
-  //   return this.appService.getHello();
-  // }
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
   @Get('bye')
   getBye(): string {
     return this.appService.getBye();
@@ -21,8 +21,8 @@ export class AppController {
   getContact(): string {
     return this.appService.getContact();
   }
-  // @Get('allStuff')
-  // getAllStuff(): string {
-  //   return `Hello, ${this.appService.getHello()}! Bye, ${this.appService.getBye()}! Contact Information: ${this.appService.getContact()}`;
-  // }
+  @Get('allStuff')
+  getAllStuff(): string {
+    return `Hello, ${this.appService.getHello()}! Bye, ${this.appService.getBye()}! Contact Information: ${this.appService.getContact()}`;
+  }
 }
