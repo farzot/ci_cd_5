@@ -21,4 +21,8 @@ export class AppController {
   getAllStuff(): string {
     return `Hello, ${this.appService.getHello()}! Bye, ${this.appService.getBye()}! Contact Information: ${this.appService.getContact()}`;
   }
+  @Get('thanks')
+  getThanks(): string {
+    return 'Thank you for visiting!';
+  }
 }

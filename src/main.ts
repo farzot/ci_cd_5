@@ -7,4 +7,5 @@ async function bootstrap() {
     console.log('Server is running on port 3000');
   });
 }
+// git pul qilib olish kerak
 bootstrap();
